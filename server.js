@@ -11,8 +11,8 @@ const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve i file statici dalla cartella dist
-app.use(express.static(path.join(__dirname, 'dist')));
+// Serve i file statici dalla cartella dist con fallback per SPA
+app.use(express.static(path.join(__dirname, 'dist'), { index: false }));
 
 // API placeholder per future funzionalità (demo request, etc.)
 app.post('/api/demo-request', (req, res) => {
@@ -26,8 +26,8 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// Gestisce React Router (SPA) - deve essere l'ultimo
-app.get('/*', (req, res) => {
+// Gestisce React Router (SPA) - fallback per tutte le route
+app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
