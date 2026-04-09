@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center section-padding overflow-hidden">
       <div className="fixed top-6 left-6 z-50">
-        <a href="/" className="text-sm font-semibold tracking-widest uppercase text-foreground">
+        <a href="/" className="text-sm font-semibold tracking-widest uppercase text-foreground bg-background/80 backdrop-blur-sm px-3 py-2 rounded-lg md:bg-transparent md:p-0">
           AlterEgo
         </a>
       </div>
