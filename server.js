@@ -26,8 +26,17 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// Gestisce React Router (SPA) - fallback per tutte le route
-app.use('*', (req, res) => {
+// Gestisce React Router (SPA) - fallback per tutte le route non-API
+app.use((req, res, next) => {
+  // Se la richiesta inizia con /api, passa al next handler
+  if (req.path.startsWith('/api')) {
+    return next();
+  }
+  // Se la richiesta è per un file statico, prova a servirlo
+  if (req.path.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg)$/)) {
+    return next();
+  }
+  // Altrimenti servi index.html per React Router
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
