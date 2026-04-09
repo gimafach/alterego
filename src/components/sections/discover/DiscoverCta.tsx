@@ -1,7 +1,7 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import FadeIn from "@/components/FadeIn";
 
-const FinalSection = () => {
+const DiscoverCta = () => {
   const { t } = useLanguage();
 
   return (
@@ -10,22 +10,19 @@ const FinalSection = () => {
         <FadeIn>
           <h2 className="headline-xl mb-20">
             {t(
-              "Qualcuno che lavora con te. Per te.",
-              "Someone who works with you. For you."
+              "Scopri cosa può fare AlterEgo nel tuo lavoro.",
+              "See what AlterEgo can do in your work."
             )}
           </h2>
         </FadeIn>
-
         <FadeIn delay={0.2}>
           <div className="divider-line mx-auto mb-12" />
         </FadeIn>
-
         <FadeIn delay={0.3}>
-          <a href="/discover" className="cta-button text-lg">
-            {t("Scopri AlterEgo", "Discover AlterEgo")}
+          <a href="#demo" className="cta-button text-lg" id="demo">
+            {t("Richiedi una demo", "Request a demo")}
           </a>
         </FadeIn>
-
         <FadeIn delay={0.4}>
           <p className="mt-20 text-sm text-muted-foreground">
             © {new Date().getFullYear()} AlterEgo. {t("Tutti i diritti riservati.", "All rights reserved.")}
@@ -36,4 +33,4 @@ const FinalSection = () => {
   );
 };
 
-export default FinalSection;
+export default DiscoverCta;

@@ -8,9 +8,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center section-padding overflow-hidden">
       <div className="fixed top-6 left-6 z-50">
-        <span className="text-sm font-semibold tracking-widest uppercase text-foreground">
+        <a href="/" className="text-sm font-semibold tracking-widest uppercase text-foreground">
           AlterEgo
-        </span>
+        </a>
       </div>
 
       <div className="max-w-5xl mx-auto text-center">
