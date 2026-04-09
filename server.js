@@ -27,7 +27,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Gestisce React Router (SPA) - deve essere l'ultimo
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
