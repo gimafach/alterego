@@ -4,7 +4,7 @@ const LanguageSwitch = () => {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="fixed top-6 right-6 z-50 flex items-center gap-1 text-sm font-medium bg-background/80 backdrop-blur-sm rounded-lg p-2 md:bg-transparent md:p-0">
+    <div className="fixed top-6 right-6 z-50 flex items-center gap-1 text-sm font-medium bg-background rounded-lg p-2 md:bg-transparent md:p-0">
       <button
         onClick={() => setLang("it")}
         className={`px-3 py-1.5 rounded-full transition-all duration-300 ${
