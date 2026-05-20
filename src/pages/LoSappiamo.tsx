@@ -77,7 +77,7 @@ const questions = [
   {
     q: ["I miei collaboratori non lo useranno mai.", "My employees will never use it."],
     a: [
-      "Probabilmente non si accorgeranno nemmeno di usarlo. Perché continua a lavorare sugli strumenti che già utilizzano ogni giorno.",
+      "Probabilmente non si accorgeranno nemmeno di usarlo. Perché continuano a lavorare con strumenti che già utilizzano ogni giorno.",
       "They may not even notice it. Because it continues working through the tools they already use every day.",
     ],
     image: bundle07,
