@@ -1,6 +1,7 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import FadeIn from "@/components/FadeIn";
-import deviceCloseup from "@/assets/device-closeup.jpg";
+import ZoomScroll from "@/components/ZoomScroll";
+import deviceCloseup from "@/assets/mimetikos_device.png";
 
 const ProductSection = () => {
   const { t } = useLanguage();
@@ -11,22 +12,22 @@ const ProductSection = () => {
         <FadeIn>
           <h2 className="headline-lg text-center mb-20">
             {t(
-              "Un dispositivo. Un nuovo modo di lavorare.",
-              "One device. A new way to work."
+              "Un dispositivo. Un nuovo modo di lavorare. Il tuo mimētikós.",
+              "One device. A new way to work. Your mimētikós."
             )}
           </h2>
         </FadeIn>
 
-        <FadeIn delay={0.2} y={60}>
+        <ZoomScroll>
           <img
             src={deviceCloseup}
-            alt="AlterEgo device close-up"
+            alt={t("mimētikós device", "mimētikós device")}
             loading="lazy"
             width={1920}
             height={1080}
             className="w-full rounded-lg"
           />
-        </FadeIn>
+        </ZoomScroll>
       </div>
     </section>
   );
