@@ -18,8 +18,8 @@ const ScaleSection = () => {
         <FadeIn delay={0.2}>
           <p className="body-lg max-w-2xl">
             {t(
-              "Risparmia un'ora al giorno. Poi moltiplicala per tutta l'azienda.",
-              "Save one hour a day. Then multiply it across your company."
+              "Risparmia un'ora al giorno. Poi moltiplicala per tutto il tuo staff, o la tua azienda.",
+              "Save one hour a day. Then multiply it across your team or company."
             )}
           </p>
         </FadeIn>
