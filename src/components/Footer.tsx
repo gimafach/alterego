@@ -27,7 +27,15 @@ const Footer = () => {
           </Link>
         </nav>
 
-        <p className="text-sm text-muted-foreground">© 2026 mimētikós</p>
+        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+          <Link to="/privacy" className="hover:text-foreground transition-colors">
+            {t("Privacy Policy", "Privacy Policy")}
+          </Link>
+          <Link to="/cookie" className="hover:text-foreground transition-colors">
+            {t("Cookie Policy", "Cookie Policy")}
+          </Link>
+          <span>© 2026 mimētikós</span>
+        </div>
       </div>
     </footer>
   );

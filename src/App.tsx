@@ -7,6 +7,8 @@ import { LanguageProvider } from "@/hooks/useLanguage";
 import Index from "./pages/Index";
 import ComeFunziona from "./pages/ComeFunziona";
 import LoSappiamo from "./pages/LoSappiamo";
+import Privacy from "./pages/Privacy";
+import Cookie from "./pages/Cookie";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/come-funziona" element={<ComeFunziona />} />
             <Route path="/lo-sappiamo" element={<LoSappiamo />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/cookie" element={<Cookie />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
